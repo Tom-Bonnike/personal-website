@@ -23,25 +23,32 @@ a::after {
   content: '';
   position: absolute;
   top: 100%;
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 50%;
   height: 3px;
   background-color: rgb(250, 14, 55);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
   transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 a::before {
+  -webkit-transform-origin: right;
   transform-origin: right;
   left: 0;
 }
 
 a::after {
+  -webkit-transform-origin: left;
   transform-origin: left;
   right: 0;
 }
 
 a:hover::after,
 a:hover::before {
+  -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
