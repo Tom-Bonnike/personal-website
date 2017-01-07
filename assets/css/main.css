@@ -1,0 +1,65 @@
+/**
+ * 1. Fixes rendering of fonts being more bold than intended.
+ */
+body {
+  background-color: rgb(16, 21, 42);
+  font: 150% / 1.5 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  color: rgb(255, 255, 255);
+  -webkit-font-smoothing: antialiased; /* 1 */
+  -moz-osx-font-smoothing: grayscale; /* 1 */
+}
+
+/**
+ * 1. Positioning context for after element, shown on hover.
+ */
+a {
+  position: relative; /* 1 */
+  color: rgb(250, 14, 55);
+  text-decoration: none;
+}
+
+a::before,
+a::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  transform: scaleX(0);
+  width: 50%;
+  height: 3px;
+  background-color: rgb(250, 14, 55);
+  transition: transform 300ms;
+}
+
+a::before {
+  transform-origin: right;
+  left: 0;
+}
+
+a::after {
+  transform-origin: left;
+  right: 0;
+}
+
+a:hover::after,
+a:hover::before {
+  transform: scaleX(1);
+}
+
+.shadowed-text {
+  text-shadow: 3px 0 0 rgb(250, 14, 55);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 260%;
+}
+
+@media (max-width: 470px) {
+  .title {
+    font-size: 200%;
+  }
+}
