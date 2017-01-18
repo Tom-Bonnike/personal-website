@@ -34,16 +34,22 @@ a::after {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
+/**
+ * 1. Fixes some strange gap on one link when hovered.
+ */
 a::before {
   -webkit-transform-origin: right;
   transform-origin: right;
-  left: 0;
+  left: 1px; /* 1 */
 }
 
+/**
+ * 1. Fixes some strange gap on one link when hovered.
+ */
 a::after {
   -webkit-transform-origin: left;
   transform-origin: left;
-  right: 0;
+  right: 1px; /* 1 */
 }
 
 a:hover::after,
