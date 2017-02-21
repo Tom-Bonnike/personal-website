@@ -71,6 +71,18 @@ a:hover::before {
   font-size: 260%;
 }
 
+.list-title {
+  margin-bottom: 0;
+}
+
+.list {
+  margin-top: 0;
+}
+
+.small {
+  font-size: 50%;
+}
+
 @media (max-width: 470px) {
   .title {
     font-size: 200%;
