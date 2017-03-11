@@ -1,9 +1,15 @@
+html,
+body {
+  height: 100%;
+}
+
 /**
  * 1. Fixes rendering of fonts being more bold than intended.
  */
 body {
+  display: flex;
   background-color: rgb(16, 21, 42);
-  font: 150% / 1.5 'Raleway', 'Helvetica', 'Arial', sans-serif;
+  font: 115% / 1.5 'Karla', 'Helvetica', 'Arial', sans-serif;
   color: rgb(255, 255, 255);
   -webkit-font-smoothing: antialiased; /* 1 */
   -moz-osx-font-smoothing: grayscale; /* 1 */
@@ -26,7 +32,7 @@ a::after {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 50%;
-  height: 3px;
+  height: 1px;
   background-color: rgb(250, 14, 55);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
@@ -59,32 +65,56 @@ a:hover::before {
 }
 
 .shadowed-text {
-  text-shadow: 3px 0 0 rgb(250, 14, 55);
+  text-shadow: 2px 0 0 rgb(250, 14, 55);
 }
 
 .container {
-  width: 80%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .container {
+    align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 60%;
+    margin-left: 150px;
+  }
+}
+
 .title {
-  font-size: 260%;
-}
-
-.list-title {
-  margin-bottom: 0;
-}
-
-.list {
-  margin-top: 0;
+  font-size: 200%;
 }
 
 .small {
-  font-size: 50%;
+  font-size: 70%;
+  font-weight: bolder;
 }
 
-@media (max-width: 470px) {
-  .title {
-    font-size: 200%;
-  }
+.projects-title {
+  margin-bottom: 0;
+}
+
+.projects-list {
+  margin-top: 0.5em;
+}
+
+.socials {
+  margin-top: 1.5em;
+  padding: 0;
+  list-style: none;
+}
+
+.socials li {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 90%;
+}
+
+.socials li:not(:last-child)::after {
+  content: '//';
 }
