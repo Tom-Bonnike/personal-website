@@ -7,6 +7,8 @@ body {
  * 1. Fixes rendering of fonts being more bold than intended.
  */
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: rgb(16, 21, 42);
   font: 115% / 1.5 'Karla', 'Helvetica', 'Arial', sans-serif;
@@ -64,10 +66,6 @@ a:hover::before {
   transform: scaleX(1);
 }
 
-.shadowed-text {
-  text-shadow: 2px 0 0 rgb(250, 14, 55);
-}
-
 .container {
   max-width: 80%;
   margin: 0 auto;
@@ -75,6 +73,8 @@ a:hover::before {
 
 @media (min-width: 768px) {
   .container {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
   }
 }
@@ -88,6 +88,23 @@ a:hover::before {
 
 .title {
   font-size: 200%;
+  -webkit-animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
+  animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
+}
+
+.shadowed-text {
+  -webkit-animation: shadowed-text 0.7s both 0.5s;
+  animation: shadowed-text 0.7s both 0.5s;
+}
+
+.about {
+  -webkit-animation: fade-in 1s both 1.2s;
+  animation: fade-in 1s both 1.2s;
+}
+
+.projects {
+  -webkit-animation: fade-in 1s both 1.5s;
+  animation: fade-in 1s both 1.5s;
 }
 
 .small {
@@ -107,6 +124,8 @@ a:hover::before {
   margin-top: 1.5em;
   padding: 0;
   list-style: none;
+  -webkit-animation: fade-in 1s both 1.8s;
+  animation: fade-in 1s both 1.8s;
 }
 
 .socials li {
@@ -117,4 +136,68 @@ a:hover::before {
 
 .socials li:not(:last-child)::after {
   content: '//';
+}
+
+@-webkit-keyframes fade-up {
+  from {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes shadowed-text {
+  from {
+    text-shadow: none;
+  }
+
+  to {
+    text-shadow: 2px 0 0 rgb(250, 14, 55);
+  }
+}
+
+@keyframes shadowed-text {
+  from {
+    text-shadow: none;
+  }
+
+  to {
+    text-shadow: 2px 0 0 rgb(250, 14, 55);
+  }
 }
