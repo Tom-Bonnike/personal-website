@@ -107,9 +107,17 @@ a:hover::before {
   animation: fade-in 1s both 1.5s;
 }
 
+.red {
+  color: rgb(250, 14, 55);
+}
+
 .small {
   font-size: 70%;
   font-weight: bolder;
+}
+
+.small a {
+  color: inherit;
 }
 
 .projects-title {
