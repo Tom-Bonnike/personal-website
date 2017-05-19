@@ -92,9 +92,12 @@ a:hover::before {
   animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .shadowed-text {
-  -webkit-animation: shadowed-text 0.7s both 0.5s;
-  animation: shadowed-text 0.7s both 0.5s;
+  text-shadow: 2px 0 0 rgb(250, 14, 55);
 }
 
 .about {
@@ -187,25 +190,5 @@ a:hover::before {
 
   to {
     opacity: 1;
-  }
-}
-
-@-webkit-keyframes shadowed-text {
-  from {
-    text-shadow: none;
-  }
-
-  to {
-    text-shadow: 2px 0 0 rgb(250, 14, 55);
-  }
-}
-
-@keyframes shadowed-text {
-  from {
-    text-shadow: none;
-  }
-
-  to {
-    text-shadow: 2px 0 0 rgb(250, 14, 55);
   }
 }
