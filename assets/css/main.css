@@ -123,6 +123,10 @@ a:hover::before {
   color: inherit;
 }
 
+.capitalized {
+  text-transform: uppercase;
+}
+
 .projects-title {
   margin-bottom: 0;
 }
