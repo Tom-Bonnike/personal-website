@@ -81,7 +81,7 @@ a:hover::before {
 
 @media (min-width: 992px) {
   .container {
-    max-width: 60%;
+    max-width: 65%;
     margin-left: 150px;
   }
 }
