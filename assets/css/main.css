@@ -129,6 +129,7 @@ a:hover::before {
 
 .projects-title {
   margin-bottom: 0;
+  font-size: 115%;
 }
 
 .projects-list {
