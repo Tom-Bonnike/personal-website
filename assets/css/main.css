@@ -79,7 +79,7 @@ a:hover::before {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1140px) {
   .container {
     max-width: 60%;
     margin-left: 150px;
@@ -130,6 +130,12 @@ a:hover::before {
 
 .capitalized {
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .capitalized {
+    display: block;
+  }
 }
 
 .projects-title {
