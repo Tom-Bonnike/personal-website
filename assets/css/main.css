@@ -24,6 +24,7 @@ a {
   position: relative; /* 1 */
   color: rgb(250, 14, 55);
   text-decoration: none;
+  outline: none;
 }
 
 a::before,
@@ -61,7 +62,9 @@ a::after {
 }
 
 a:hover::after,
-a:hover::before {
+a:hover::before,
+a:focus::after,
+a:focus::before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
