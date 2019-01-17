@@ -1,3 +1,9 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --navy: rgb(16, 21, 42);
+  --red: rgb(246, 60, 88);
+}
+
 html,
 body {
   min-height: 100vh;
@@ -7,12 +13,10 @@ body {
  * 1. Fixes rendering of fonts being more bold than intended.
  */
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  background-color: rgb(16, 21, 42);
+  background-color: var(--navy);
   font: 115% / 1.5 'Karla', 'Helvetica', 'Arial', sans-serif;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   -webkit-font-smoothing: antialiased; /* 1 */
   -moz-osx-font-smoothing: grayscale; /* 1 */
 }
@@ -22,7 +26,7 @@ body {
  */
 a {
   position: relative; /* 1 */
-  color: rgb(250, 14, 55);
+  color: var(--red);
   text-decoration: none;
   outline: none;
 }
@@ -32,22 +36,17 @@ a::after {
   content: '';
   position: absolute;
   top: 100%;
-  -webkit-transform: scaleX(0);
   transform: scaleX(0);
   width: 50%;
   height: 1px;
-  background-color: rgb(250, 14, 55);
-  -webkit-transition: -webkit-transform 300ms;
-  transition: -webkit-transform 300ms;
+  background-color: var(--red);
   transition: transform 300ms;
-  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 /**
  * 1. Fixes some strange gap on one link when hovered.
  */
 a::before {
-  -webkit-transform-origin: right;
   transform-origin: right;
   left: 1px; /* 1 */
 }
@@ -56,7 +55,6 @@ a::before {
  * 1. Fixes some strange gap on one link when hovered.
  */
 a::after {
-  -webkit-transform-origin: left;
   transform-origin: left;
   right: 1px; /* 1 */
 }
@@ -65,8 +63,26 @@ a:hover::after,
 a:hover::before,
 a:focus::after,
 a:focus::before {
-  -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.shadowed-text {
+  text-shadow: 2px 0 0 var(--red);
+}
+
+.small {
+  font-size: 70%;
+  font-weight: bolder;
+}
+
+.capitalized {
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .capitalized {
+    display: block;
+  }
 }
 
 .container {
@@ -91,54 +107,19 @@ a:focus::before {
 
 .title {
   font-size: 200%;
-  -webkit-animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
   animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
 }
 
-.italic {
-  font-style: italic;
-}
-
-.shadowed-text {
-  text-shadow: 2px 0 0 rgb(250, 14, 55);
-}
-
 .about {
-  -webkit-animation: fade-in 1s both 1.2s;
   animation: fade-in 1s both 1.2s;
 }
 
 .projects {
-  -webkit-animation: fade-in 1s both 1.5s;
   animation: fade-in 1s both 1.5s;
 }
 
 .open-source {
-  -webkit-animation: fade-in 1s both 1.5s;
   animation: fade-in 1s both 1.5s;
-}
-
-.red {
-  color: rgb(250, 14, 55);
-}
-
-.small {
-  font-size: 70%;
-  font-weight: bolder;
-}
-
-.small a {
-  color: inherit;
-}
-
-.capitalized {
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  .capitalized {
-    display: block;
-  }
 }
 
 .projects-title {
@@ -150,55 +131,30 @@ a:focus::before {
   margin-top: 0.5em;
 }
 
-.socials {
+.networks {
   margin-top: 1.5em;
   padding: 0;
   list-style: none;
-  -webkit-animation: fade-in 1s both 1.8s;
   animation: fade-in 1s both 1.8s;
 }
 
-.socials li {
+.network {
   display: inline-block;
   text-transform: uppercase;
   font-size: 90%;
 }
 
-.socials li:not(:last-child)::after {
+.network:not(:last-child)::after {
   content: '//';
-}
-
-@-webkit-keyframes fade-up {
-  from {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-  }
-
-  to {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 
 @keyframes fade-up {
   from {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    transform: translateY(2em);
   }
 
   to {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
-  }
-}
-
-@-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
   }
 }
 
