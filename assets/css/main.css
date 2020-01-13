@@ -151,24 +151,20 @@ a:focus::before {
 }
 
 .projects-list {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 .networks {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
   padding: 0;
   list-style: none;
   animation: fade-in 1s both 1.8s;
+  font-size: 90%;
 }
 
 .network {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 90%;
-}
-
-.network:not(:last-child)::after {
-  content: '//';
 }
 
 @keyframes fade-up {
