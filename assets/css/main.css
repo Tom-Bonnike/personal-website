@@ -8,23 +8,23 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 }
 
 @font-face {
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Karla'), local('Karla-Regular'),
-    url('../fonts/karla-regular.woff2') format('woff2'),
-    url('../fonts/karla-regular.woff') format('woff');
+  src: local("Karla"), local("Karla-Regular"),
+    url("../fonts/karla-regular.woff2") format("woff2"),
+    url("../fonts/karla-regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Karla';
+  font-family: "Karla";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local('Karla Bold'), local('Karla-Bold'),
-    url('../fonts/karla-bold.woff2') format('woff2'),
-    url('../fonts/karla-bold.woff') format('woff');
+  src: local("Karla Bold"), local("Karla-Bold"),
+    url("../fonts/karla-bold.woff2") format("woff2"),
+    url("../fonts/karla-bold.woff") format("woff");
 }
 
 html,
@@ -32,23 +32,19 @@ body {
   min-height: 100vh;
 }
 
-/**
- * 1. Fixes rendering of fonts being more bold than intended.
- */
 body {
   display: flex;
   background-color: var(--navy);
-  font: 115% / 1.5 'Karla', 'Helvetica', 'Arial', sans-serif;
+  font: 115% / 1.5 "Karla", "Helvetica", "Arial", sans-serif;
   color: var(--white);
-  -webkit-font-smoothing: antialiased; /* 1 */
-  -moz-osx-font-smoothing: grayscale; /* 1 */
+  /* Fixes rendering of fonts being more bold than intended. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/**
- * 1. Positioning context for after element, shown on hover.
- */
 a {
-  position: relative; /* 1 */
+  /* Positioning context for after element, shown on hover. */
+  position: relative;
   color: var(--red);
   text-decoration: none;
   outline: none;
@@ -56,7 +52,7 @@ a {
 
 a::before,
 a::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   transform: scaleX(0);
@@ -66,20 +62,14 @@ a::after {
   transition: transform 300ms;
 }
 
-/**
- * 1. Fixes some strange gap on one link when hovered.
- */
 a::before {
   transform-origin: right;
-  left: 1px; /* 1 */
+  left: 1px; /* Fixes some strange gap when hovered. */
 }
 
-/**
- * 1. Fixes some strange gap on one link when hovered.
- */
 a::after {
   transform-origin: left;
-  right: 1px; /* 1 */
+  right: 1px; /* Fixes some strange gap when hovered. */
 }
 
 a:hover::after,
@@ -129,6 +119,7 @@ a:focus::before {
 }
 
 .title {
+  margin-top: 0;
   font-size: 200%;
   animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
 }
@@ -137,25 +128,13 @@ a:focus::before {
   animation: fade-in 1s both 1.2s;
 }
 
-.projects {
-  animation: fade-in 1s both 1.5s;
-}
-
 .open-source {
   animation: fade-in 1s both 1.5s;
 }
 
-.projects-title {
-  margin-bottom: 0;
-  font-size: 115%;
-}
-
-.projects-list {
-  margin-top: 0.5rem;
-}
-
 .networks {
   margin-top: 1.5rem;
+  margin-bottom: 0;
   padding: 0;
   list-style: none;
   animation: fade-in 1s both 1.8s;
