@@ -83,21 +83,6 @@ a:focus::before {
   text-shadow: 2px 0 0 var(--red);
 }
 
-.small {
-  font-size: 70%;
-  font-weight: bolder;
-}
-
-.capitalized {
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  .capitalized {
-    display: block;
-  }
-}
-
 .container {
   max-width: 90%;
   margin: 0 auto;
@@ -128,16 +113,12 @@ a:focus::before {
   animation: fade-in 1s both 1.2s;
 }
 
-.open-source {
-  animation: fade-in 1s both 1.5s;
-}
-
 .networks {
   margin-top: 1.5rem;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
-  animation: fade-in 1s both 1.8s;
+  animation: fade-in 1s both 1.5s;
   font-size: 90%;
 }
 
