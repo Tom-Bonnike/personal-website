@@ -128,8 +128,8 @@ a:focus::before {
 
 @media (min-width: 1140px) {
   .container {
-    max-width: 60%;
-    margin-left: 150px;
+    max-width: 72ch;
+    margin-left: 10%;
   }
 }
 
