@@ -88,23 +88,7 @@ a:focus::before {
   margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-}
-
-@media (min-width: 1140px) {
-  .container {
-    max-width: 60%;
-    margin-left: 150px;
-  }
-}
-
 .title {
-  margin-top: 0;
   font-size: 200%;
   animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
 }
@@ -115,7 +99,6 @@ a:focus::before {
 
 .networks {
   margin-top: 1.5rem;
-  margin-bottom: 0;
   padding: 0;
   list-style: none;
   animation: fade-in 1s both 1.5s;
@@ -125,6 +108,29 @@ a:focus::before {
 .network {
   display: inline-block;
   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .container {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+
+  .title {
+    margin-top: 0;
+  }
+
+  .networks {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1140px) {
+  .container {
+    max-width: 60%;
+    margin-left: 150px;
+  }
 }
 
 @keyframes fade-up {
