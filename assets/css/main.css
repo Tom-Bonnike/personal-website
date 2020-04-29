@@ -8,23 +8,23 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 }
 
 @font-face {
-  font-family: "Karla";
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Karla"), local("Karla-Regular"),
-    url("../fonts/karla-regular.woff2") format("woff2"),
-    url("../fonts/karla-regular.woff") format("woff");
+  src: local('Karla'), local('Karla-Regular'),
+    url('../fonts/karla-regular.woff2') format('woff2'),
+    url('../fonts/karla-regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: "Karla";
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: local("Karla Bold"), local("Karla-Bold"),
-    url("../fonts/karla-bold.woff2") format("woff2"),
-    url("../fonts/karla-bold.woff") format("woff");
+  src: local('Karla Bold'), local('Karla-Bold'),
+    url('../fonts/karla-bold.woff2') format('woff2'),
+    url('../fonts/karla-bold.woff') format('woff');
 }
 
 html,
@@ -35,7 +35,7 @@ body {
 body {
   display: flex;
   background-color: var(--navy);
-  font: 115% / 1.5 "Karla", "Helvetica", "Arial", sans-serif;
+  font: 115% / 1.5 'Karla', 'Helvetica', 'Arial', sans-serif;
   color: var(--white);
   /* Fixes rendering of fonts being more bold than intended. */
   -webkit-font-smoothing: antialiased;
@@ -52,7 +52,7 @@ a {
 
 a::before,
 a::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 100%;
   transform: scaleX(0);
