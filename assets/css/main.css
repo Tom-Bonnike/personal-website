@@ -110,6 +110,11 @@ a:focus::before {
   text-transform: uppercase;
 }
 
+.network:not(:last-child)::after {
+  /* Add a visual separator but hide it from screen readers. */
+  content: '//' / '';
+}
+
 @media (min-width: 768px) {
   .container {
     -ms-flex-item-align: center;
