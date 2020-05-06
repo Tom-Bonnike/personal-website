@@ -111,7 +111,7 @@ a:focus::before {
 }
 
 .network:not(:last-child)::after {
-  /* Add a visual separator but hide it from screen readers. */
+  /* Adds a visual separator but hides it from screen readers. */
   content: '//' / '';
 }
 
