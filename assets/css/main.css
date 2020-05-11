@@ -138,6 +138,14 @@ a:focus::before {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .title,
+  .about,
+  .networks {
+    animation: none;
+  }
+}
+
 @keyframes fade-up {
   from {
     transform: translateY(2em);
