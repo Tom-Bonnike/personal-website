@@ -13,8 +13,8 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   font-weight: 400;
   font-display: swap;
   src: local('Karla'), local('Karla-Regular'),
-    url('../fonts/karla-regular.woff2') format('woff2'),
-    url('../fonts/karla-regular.woff') format('woff');
+    url('./fonts/karla-regular.woff2') format('woff2'),
+    url('./fonts/karla-regular.woff') format('woff');
 }
 
 @font-face {
@@ -23,8 +23,8 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
   font-weight: 700;
   font-display: swap;
   src: local('Karla Bold'), local('Karla-Bold'),
-    url('../fonts/karla-bold.woff2') format('woff2'),
-    url('../fonts/karla-bold.woff') format('woff');
+    url('./fonts/karla-bold.woff2') format('woff2'),
+    url('./fonts/karla-bold.woff') format('woff');
 }
 
 html,
