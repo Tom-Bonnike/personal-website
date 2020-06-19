@@ -1,3 +1,6 @@
+[build.environment]
+  NODE_VERSION = "12.18.1"
+
 [build.processing]
   skip_processing = false
 
