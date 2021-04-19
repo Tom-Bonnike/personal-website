@@ -20,3 +20,8 @@
 
 [[plugins]]
   package = 'netlify-plugin-inline-source'
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permissions-Policy = "interest-cohort=()"
