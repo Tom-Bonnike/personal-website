@@ -4,7 +4,7 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 :root {
   --text-color: rgb(255, 255, 255);
   --background-color: rgb(15, 20, 40);
-  --links-color: rgb(245, 60, 90);
+  --accent-color: rgb(245, 60, 90);
 }
 
 @font-face {
@@ -45,7 +45,7 @@ body {
 a {
   /* Positioning context for after element, shown on hover. */
   position: relative;
-  color: var(--links-color);
+  color: var(--accent-color);
   text-decoration: none;
   outline: none;
 }
@@ -58,7 +58,7 @@ a::after {
   transform: scaleX(0);
   width: 50%;
   height: 1px;
-  background-color: var(--links-color);
+  background-color: currentColor;
   transition: transform 300ms;
 }
 
@@ -80,7 +80,7 @@ a:focus::before {
 }
 
 .shadowed-text {
-  text-shadow: 2px 0 0 var(--links-color);
+  text-shadow: 2px 0 0 var(--accent-color);
 }
 
 .container {
@@ -157,11 +157,14 @@ a:focus::before {
   :root {
     --text-color: rgb(30, 30, 30);
     --background-color: rgba(240, 235, 215);
-    --links-color: rgb(195, 50, 70);
+    --accent-color: rgb(195, 50, 70);
+  }
+
+  .heading {
+    color: var(--accent-color);
   }
 
   .shadowed-text {
-    color: var(--links-color);
     text-shadow: none;
   }
 }
