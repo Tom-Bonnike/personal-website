@@ -110,9 +110,27 @@
         </li>
 
         <li class="network">
-          <a href="mailto:bonniketom@gmail.com?body=%E2%9B%94%EF%B8%8F%20Recruiters%2C%20please%20reach%20out%20on%20LinkedIn.">E-mail</a>
+          <a
+            href="mailto:bonniketom@gmail.com?body=%E2%9B%94%EF%B8%8F%20Recruiters,%20please%20reach%20out%20via%20LinkedIn%20or%20I%20will%20mark%20your%20e-mail%20as%20spam."
+            id="mail-link"
+          >
+            E-mail
+          </a>
         </li>
       </ul>
     </main>
+
+    <script>
+      const $emailLink = document.getElementById("mail-link");
+
+      $emailLink.addEventListener('contextmenu', alertRecruiters);
+      $emailLink.addEventListener('click', alertRecruiters);
+
+      function alertRecruiters() {
+        const recruiterWarning = new URLSearchParams($emailLink.search).get('body');
+
+        alert(recruiterWarning);
+      }
+    </script>
   </body>
 </html>
