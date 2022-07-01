@@ -90,7 +90,7 @@ a:focus::before {
 
 .heading {
   font-size: 200%;
-  animation: fade-up 1s 0.2s both, fade-in 1s 0.2s both;
+  animation: move-up 1s 0.2s both, fade-in 1s 0.2s both;
 }
 
 .about {
@@ -169,7 +169,7 @@ a:focus::before {
   }
 }
 
-@keyframes fade-up {
+@keyframes move-up {
   from {
     transform: translateY(2em);
   }
